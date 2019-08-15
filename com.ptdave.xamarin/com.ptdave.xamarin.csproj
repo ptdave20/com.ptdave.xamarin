@@ -8,6 +8,9 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <Description>Simple tools to help prevent reinventing the wheel.</Description>
     <Copyright>Copyright (c) 2019 David Marchbanks</Copyright>
+    <RepositoryUrl>https://github.com/ptdave20/com.ptdave.xamarin</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ptdave20/com.ptdave.xamarin</PackageProjectUrl>
+    <PackageTags>Xamarin</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +22,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
 
 </Project>
