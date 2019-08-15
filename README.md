@@ -29,3 +29,21 @@ These are some simple converters
  - IsNull (Bound object is null (true/false))
  - IsNotNull (Bound object is not null (true/false))
  - StringLength (Returns the length of the bound string, defaults 0)
+
+
+ Accessible by adding the following to your ContentPage Xaml:
+ ```
+    xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
+```
+
+The following is an example of adding it to the ResourceDictionary for that ContentPage
+```
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vc:Invert x:Key="Invert" />
+            <vc:IsNotNull x:Key="IsNotNull" />
+            <vc:IsNull x:Key="IsNull" />
+            <vc:StringLength x:Key="StringLength" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+```
