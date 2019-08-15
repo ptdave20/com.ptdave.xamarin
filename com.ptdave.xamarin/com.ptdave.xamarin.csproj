@@ -11,6 +11,9 @@
     <RepositoryUrl>https://github.com/ptdave20/com.ptdave.xamarin</RepositoryUrl>
     <PackageProjectUrl>https://github.com/ptdave20/com.ptdave.xamarin</PackageProjectUrl>
     <PackageTags>Xamarin</PackageTags>
+    <Version>1.0.1</Version>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
