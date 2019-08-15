@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="com.ptdave.xamarin.test.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonthelper="clr-namespace:com.ptdave.xamarin.FontHelpers;assembly=com.ptdave.xamarin"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
+    mc:Ignorable="d">
+    <Application.Resources>
+
+        <OnPlatform
+            x:Key="fa-fab"
+            x:TypeArguments="x:String"
+            Android="fab.otf#Font Awesome 5 Free Brands"
+            iOS="FontAwesome5Brands-Regular" />
+        <OnPlatform
+            x:Key="fa-far"
+            x:TypeArguments="x:String"
+            Android="far.otf#Font Awesome 5 Free Regular"
+            iOS="FontAwesome5Free-Regular" />
+        <OnPlatform
+            x:Key="fa-fas"
+            x:TypeArguments="x:String"
+            Android="fas.otf#Font Awesome 5 Free Solid"
+            iOS="FontAwesome5Free-Solid" />
+    </Application.Resources>
+</Application>

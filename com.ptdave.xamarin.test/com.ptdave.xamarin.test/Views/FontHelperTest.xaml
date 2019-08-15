@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="com.ptdave.xamarin.test.Views.FontHelperTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonthelper="clr-namespace:com.ptdave.xamarin.FontHelpers;assembly=com.ptdave.xamarin"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView Padding="5" Orientation="Vertical">
+            <FlexLayout
+                Padding="10"
+                AlignItems="Start"
+                Direction="Row"
+                JustifyContent="Start"
+                Wrap="Wrap">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.Microsoft}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.Google}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.GoogleDrive}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.GooglePlay}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.GoogleWallet}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.Facebook}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.FacebookF}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.FacebookMessenger}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fab}"
+                            Glyph="{x:Static fonthelper:FAB.FacebookSquare}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.Bell}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.Eye}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.Angry}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.AddressCard}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.Bookmark}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.Building}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.File}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.FileAudio}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.FileCode}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.HandRock}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.HandPaper}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource fa-fas}"
+                            Glyph="{x:Static fonthelper:FAS.HandPointer}"
+                            Size="40"
+                            Color="Black" />
+                    </Image.Source>
+                </Image>
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

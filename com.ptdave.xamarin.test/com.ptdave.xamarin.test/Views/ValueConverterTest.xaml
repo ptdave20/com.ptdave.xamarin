@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="com.ptdave.xamarin.test.Views.ValueConverterTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
+    xmlns:vm="clr-namespace:com.ptdave.xamarin.test.ViewModels"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:ValueConvertModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vc:Invert x:Key="Invert" />
+            <vc:IsNotNull x:Key="IsNotNull" />
+            <vc:IsNull x:Key="IsNull" />
+            <vc:StringLength x:Key="StringLength" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="5" Spacing="10">
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="Toggle to test" />
+                <Switch IsToggled="{Binding BoolTest}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="Invert Test" />
+                <Switch IsEnabled="False" IsToggled="{Binding BoolTest, Converter={StaticResource Invert}}" />
+            </StackLayout>
+            <Entry Placeholder="String Test" Text="{Binding InputTest}" />
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="String Length" />
+                <Label Text="{Binding InputTest, Converter={StaticResource StringLength}}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>David Marchbanks</Authors>
+    <Company>David Marchbanks</Company>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <Description>Simple tools to help prevent reinventing the wheel.</Description>
+    <Copyright>Copyright (c) 2019 David Marchbanks</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
