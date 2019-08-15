@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>David Marchbanks</Authors>
     <Company>David Marchbanks</Company>
-    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Description>Simple tools to help prevent reinventing the wheel.</Description>
     <Copyright>Copyright (c) 2019 David Marchbanks</Copyright>
     <RepositoryUrl>https://github.com/ptdave20/com.ptdave.xamarin</RepositoryUrl>
@@ -21,14 +21,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="License.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <Folder Include="Controls\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controls\" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
