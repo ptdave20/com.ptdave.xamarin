@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>com.ptdave.xamarin</id>
+    <version>1.0.3</version>
+    <authors>David Marchbanks</authors>
+    <owners>David Marchbanks</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://github.com/ptdave20/com.ptdave.xamarin</projectUrl>
+    <description>Simple tools to help prevent reinventing the wheel.</description>
+    <copyright>Copyright (c) 2019 David Marchbanks</copyright>
+    <tags>Xamarin</tags>
+    <repository type="Git" url="https://github.com/ptdave20/com.ptdave.xamarin" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Xamarin.Forms" version="4.1.0.673156" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="LICENSE.md" target=""/>
+    <file src="com.ptdave.xamarin\bin\Debug\*.dll" target="lib" />
+    <file src="com.ptdave.xamarin.ios\bin\Release\*.dll" target="lib\Xamarin.iOS10" />
+    <file src="com.ptdave.xamarin.android\bin\Release\*.dll" target="lib\MonoAndroid10" />
+  </files>
+</package>
