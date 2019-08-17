@@ -25,7 +25,7 @@ namespace com.ptdave.xamarin.test.iOS
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            com.ptdave.xamarin.ios.Instance.Initialize();
+            com.ptdave.xamarin.Helper.Initialize();
 
             return base.FinishedLaunching(app, options);
         }

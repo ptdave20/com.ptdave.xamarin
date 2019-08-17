@@ -1,6 +1,31 @@
 # com.ptdave.xamarin
 Simple tools to help improve the speed of development
 
+## Initialization
+
+### Android
+Inside of your main activity, please initialize the plugin in order to use the DependencyService injections like so:
+```
+com.ptdave.xamarin.Helper.Initialize(this, savedInstanceState);
+```
+
+### iOS
+Inside of your AppDelegate, please initialize the plugin in order to use the DependencyService injections like so:
+```
+com.ptdave.xamarin.Helper.Initialize();
+```
+
+## File Helper
+The file helper is intended to prevent having to create your own file location handlers for plugins like SQLite or others.
+
+```
+var fileService = DependencyService.Get<IFileHelper>();
+var dbPath = fileService.DatabaseFile("data.db");
+```
+
+Additional paths will become available as necessary
+
+
 ## Font Helpers
 Simple addons to retrieve all the font unicode values for FontAwesome 5 and Material Icons
 
@@ -47,3 +72,6 @@ The following is an example of adding it to the ResourceDictionary for that Cont
     </ResourceDictionary>
 </ContentPage.Resources>
 ```
+
+## Contributing
+I accept pull request. I just ask that you please discuss with me first what you want to accomplish to see if it fits the project.

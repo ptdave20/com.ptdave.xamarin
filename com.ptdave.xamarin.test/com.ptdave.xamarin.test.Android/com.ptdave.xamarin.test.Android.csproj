@@ -115,6 +115,10 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\com.ptdave.xamarin\com.ptdave.xamarin.csproj">
+      <Project>{330d241b-0ea9-43e9-b7a7-6fcc20afa4c9}</Project>
+      <Name>com.ptdave.xamarin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\com.ptdave.xamarin.test\com.ptdave.xamarin.test.csproj">
       <Project>{D02B2611-C1B5-4494-B2CD-120C428E7779}</Project>
       <Name>com.ptdave.xamarin.test</Name>

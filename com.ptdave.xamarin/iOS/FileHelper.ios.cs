@@ -12,10 +12,6 @@ namespace com.ptdave.xamarin.ios
     [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
-        public FileHelper()
-        {
-
-        }
         public string DatabaseFile(string filename)
         {
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library", filename);
