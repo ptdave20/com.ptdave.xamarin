@@ -33,7 +33,7 @@ These are some simple converters
 
  Accessible by adding the following to your ContentPage Xaml:
  ```
-    xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
+xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
 ```
 
 The following is an example of adding it to the ResourceDictionary for that ContentPage
