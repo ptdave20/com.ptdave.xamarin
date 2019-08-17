@@ -12,7 +12,7 @@
     <description>Simple tools to help prevent reinventing the wheel.</description>
     <copyright>Copyright (c) 2019 David Marchbanks</copyright>
     <tags>Xamarin</tags>
-    <repository type="Git" url="https://github.com/ptdave20/com.ptdave.xamarin" />
+    <repository type="git" url="https://github.com/ptdave20/com.ptdave.xamarin" />
     <dependencies>
       <group targetFramework=".NETStandard2.0">
         <dependency id="Xamarin.Forms" version="4.1.0.673156" exclude="Build,Analyzers" />

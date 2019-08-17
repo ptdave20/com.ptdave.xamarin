@@ -1,8 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<!--<Project Sdk="Microsoft.NET.Sdk">-->
+<Project Sdk="MSBuild.Sdk.Extras/2.0.29">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <!--<TargetFramework>netstandard2.0</TargetFramework>-->
+    <TargetFrameworks></TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    
     <Authors>David Marchbanks</Authors>
     <Company>David Marchbanks</Company>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -11,18 +15,37 @@
     <RepositoryUrl>https://github.com/ptdave20/com.ptdave.xamarin</RepositoryUrl>
     <PackageProjectUrl>https://github.com/ptdave20/com.ptdave.xamarin</PackageProjectUrl>
     <PackageTags>Xamarin</PackageTags>
+    <PackageId>com.ptdave.xamarin</PackageId>
     <Version>1.0.2</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>Git</RepositoryType>
+    <Configurations>Debug;Release;Nuget Release</Configurations>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <LangVersion>latest</LangVersion>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <!--<PropertyGroup Condition="$(TargetFramework.StartsWith('MonoAndroid'))">
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+  </PropertyGroup>-->
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <ItemGroup>
     <None Include="..\LICENSE.md">
@@ -31,4 +54,37 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+    <Compile Include="**\*.shared.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+    
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Compile Include="**\*.android.cs" />
+  </ItemGroup>
+
+  <PropertyGroup Label="Android DesignTimeBuild error workaround">
+    <DesignTimeBuild>false</DesignTimeBuild>
+  </PropertyGroup>
+
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <Compile Include="**\*.apple.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <Compile Include="**\*.uwp.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UWP\" />
+  </ItemGroup>
 </Project>

@@ -51,6 +51,13 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="FileHelper">
+        <Tab>
+            <ShellContent>
+                <local:FileHelper />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
 
     <!-- Optional Templates
     // These may be provided inline as below or as separate classes.

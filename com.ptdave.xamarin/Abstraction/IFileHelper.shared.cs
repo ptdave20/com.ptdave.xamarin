@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace com.ptdave.xamarin.Services
+namespace com.ptdave.xamarin.Abstraction
 {
     public interface IFileHelper
     {
