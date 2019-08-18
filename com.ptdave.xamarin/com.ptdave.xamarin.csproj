@@ -16,7 +16,7 @@
     <PackageProjectUrl>https://github.com/ptdave20/com.ptdave.xamarin</PackageProjectUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin</PackageTags>
     <PackageId>com.ptdave.xamarin</PackageId>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
     <Configurations>Debug;Release;Nuget Release</Configurations>
