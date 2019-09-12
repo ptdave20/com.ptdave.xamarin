@@ -6,10 +6,8 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-[assembly: Dependency(typeof(IFileHelper))]
 namespace com.ptdave.xamarin.ios
 {
-    [Preserve(AllMembers = true)]
     public class FileHelper : IFileHelper
     {
         public string DatabaseFile(string filename)

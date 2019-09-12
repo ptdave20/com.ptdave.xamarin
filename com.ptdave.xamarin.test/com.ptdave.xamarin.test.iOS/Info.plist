@@ -32,8 +32,6 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>com.ptdave.xamarin.test</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>far.otf</string>
