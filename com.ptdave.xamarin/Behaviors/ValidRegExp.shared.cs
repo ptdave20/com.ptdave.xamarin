@@ -1,16 +1,12 @@
-﻿using com.ptdave.xamarin.Abstraction;
-using com.ptdave.xamarin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 
 namespace com.ptdave.xamarin.Behaviors
 {
-    /// <summary>
-    /// Minimum Length Behavior
-    /// </summary>
-    public class MinimumLength : Behavior<View>
+    public class ValidRegExp : Behavior<View>
     {
         /// <summary>
         /// Attach
@@ -19,7 +15,7 @@ namespace com.ptdave.xamarin.Behaviors
         protected override void OnAttachedTo(View bindable)
         {
             base.OnAttachedTo(bindable);
-            if(bindable is IValidated)
+            if (bindable is IValidated)
             {
                 var b = bindable as IValidated;
             }
@@ -28,11 +24,18 @@ namespace com.ptdave.xamarin.Behaviors
             {
                 var entry = bindable as Entry;
                 entry.TextChanged += Value_TextChanged;
-            } else if(bindable is Editor)
+            }
+            else if (bindable is Editor)
             {
                 var editor = bindable as Editor;
                 editor.TextChanged += Value_TextChanged;
             }
+        }
+
+        private void Value_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var regexp = new Regex(this.RegExp);
+            IsValid = regexp.IsMatch(e.NewTextValue);
         }
 
         /// <summary>
@@ -54,30 +57,19 @@ namespace com.ptdave.xamarin.Behaviors
             }
         }
 
-        /// <summary>
-        /// Minimum Length to be met
-        /// </summary>
-        public int Length
+
+        public string RegExp
         {
-            get
-            {
-                return (int)GetValue(MinimumLengthProperty);
-            }
-            set
-            {
-                SetValue(MinimumLengthProperty, value);
-            }
+            get => (string)GetValue(RegExpProperty);
+            set => SetValue(RegExpProperty, value);
         }
+        public readonly BindableProperty RegExpProperty = BindableProperty.Create(
+            nameof(RegExp),
+            typeof(string),
+            typeof(ValidRegExp),
+            BindingMode.TwoWay
+            );
 
-
-        /// <summary>
-        /// MinimumLengthProperty
-        /// </summary>
-        public static readonly BindableProperty MinimumLengthProperty = BindableProperty.Create(
-            nameof(Length), 
-            typeof(int), 
-            typeof(MinimumLength), 
-            -1);
 
         /// <summary>
         /// Is the MinimumLength met
@@ -105,7 +97,7 @@ namespace com.ptdave.xamarin.Behaviors
             nameof(ErrorMessage),
             typeof(string),
             typeof(MinimumLength),
-            defaultValue: "Minimum length not met",
+            defaultValue: "Invalid value",
             defaultBindingMode: BindingMode.OneWayToSource);
 
         /// <summary>
@@ -118,17 +110,5 @@ namespace com.ptdave.xamarin.Behaviors
             false);
 
         public event EventHandler IsValidChanged;
-
-        private void Value_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if(Length > -1)
-            {
-                IsValid = e.NewTextValue.Length >= Length;
-            } else
-            {
-                // We need a minimum length greater -1
-                IsValid = true;
-            }
-        }
     }
 }

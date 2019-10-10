@@ -58,6 +58,13 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Validation">
+        <Tab>
+            <ShellContent>
+                <local:Validation />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
 
     <!-- Optional Templates
     // These may be provided inline as below or as separate classes.
