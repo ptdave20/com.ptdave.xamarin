@@ -48,6 +48,12 @@ Then you can access it easily like so (Your font family may vary):
 </Image>
 ```
 
+## Behaviors
+Several behaviors are there to simplify some work and validation
+- Minimum Length - Does the input string meet the required length?
+- RegExp Tester - Does the input match the enterred regex?
+- Had Focus - Has the field had focus?
+
 ## Value Converters
 These are some simple converters
  - Invert (false to true, true to false)
