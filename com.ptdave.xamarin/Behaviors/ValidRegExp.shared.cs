@@ -1,4 +1,5 @@
-﻿using System;
+﻿using com.ptdave.xamarin.Abstraction;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -15,10 +16,6 @@ namespace com.ptdave.xamarin.Behaviors
         protected override void OnAttachedTo(View bindable)
         {
             base.OnAttachedTo(bindable);
-            if (bindable is IValidated)
-            {
-                var b = bindable as IValidated;
-            }
 
             if (bindable is Entry)
             {

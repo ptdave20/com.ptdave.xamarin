@@ -1,9 +1,12 @@
-﻿using com.ptdave.xamarin.Abstraction;
+﻿using com.ptdave.xamarin;
+using com.ptdave.xamarin.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(FileHelper))]
 namespace com.ptdave.xamarin
 {
     public class FileHelper : IFileHelper
