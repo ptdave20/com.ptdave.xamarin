@@ -81,3 +81,8 @@ The following is an example of adding it to the ResourceDictionary for that Cont
 
 ## Contributing
 I accept pull request. I just ask that you please discuss with me first what you want to accomplish to see if it fits the project.
+
+## Acknowledgements
+The following people have either helped in the project or allowed their code snippets to be used in the project.
+
+- Brandon Minick @TheCodeTraveler ( Environment for Theme inspired by his code found [https://codetraveler.io/2019/09/11/check-for-dark-mode-in-xamarin-forms/](here))
