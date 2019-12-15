@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using com.ptdave.xamarin.test.Views;
+using com.ptdave.xamarin.Abstraction;
 
 namespace com.ptdave.xamarin.test
 {
@@ -15,7 +16,7 @@ namespace com.ptdave.xamarin.test
             MainPage = new AppShell();
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
             // Handle when your app starts
         }

@@ -13,15 +13,10 @@ namespace com.ptdave.xamarin.test.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FileHelper : ContentPage
     {
-        public ViewModels.FileHelperModel Model
-        {
-            get => (ViewModels.FileHelperModel)BindingContext;
-            set => BindingContext = value;
-        }
+
         public FileHelper()
         {
             InitializeComponent();
-            Model = new ViewModels.FileHelperModel();
         }
 
         protected override void OnAppearing()

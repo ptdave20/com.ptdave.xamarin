@@ -12,15 +12,9 @@ namespace com.ptdave.xamarin.test.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ValueConverterTest : ContentPage
     {
-        public ViewModels.ValueConvertModel Model
-        {
-            get => (ViewModels.ValueConvertModel)BindingContext;
-            set => BindingContext = value;
-        }
         public ValueConverterTest()
         {
             InitializeComponent();
-            Model = new ViewModels.ValueConvertModel();
         }
     }
 }

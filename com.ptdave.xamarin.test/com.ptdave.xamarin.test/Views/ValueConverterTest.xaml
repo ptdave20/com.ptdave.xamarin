@@ -7,9 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vc="clr-namespace:com.ptdave.xamarin.ValueConverters;assembly=com.ptdave.xamarin"
     xmlns:vm="clr-namespace:com.ptdave.xamarin.test.ViewModels"
+    x:DataType="vm:ValueConvertModel"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
-        <vm:ValueConvertModel />
+        <vm:ValueConvertModel x:Name="Model" />
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -17,6 +18,9 @@
             <vc:IsNotNull x:Key="IsNotNull" />
             <vc:IsNull x:Key="IsNull" />
             <vc:StringLength x:Key="StringLength" />
+            <vc:ToUpper x:Key="ToUpper" />
+            <vc:ToLower x:Key="ToLower" />
+            <vc:IsEmpty x:Key="IsEmpty" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -33,6 +37,18 @@
             <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                 <Label HorizontalOptions="StartAndExpand" Text="String Length" />
                 <Label Text="{Binding InputTest, Converter={StaticResource StringLength}}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="ToUpper" />
+                <Label Text="{Binding InputTest, Converter={StaticResource ToUpper}}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="ToLower" />
+                <Label Text="{Binding InputTest, Converter={StaticResource ToLower}}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="IsEmpty (string)" />
+                <Label Text="{Binding InputTest, Converter={StaticResource IsEmpty}}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

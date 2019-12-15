@@ -58,10 +58,10 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Validation">
+    <FlyoutItem Title="Environment">
         <Tab>
             <ShellContent>
-                <local:Validation />
+                <local:Environment />
             </ShellContent>
         </Tab>
     </FlyoutItem>

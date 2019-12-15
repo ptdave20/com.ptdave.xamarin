@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace com.ptdave.xamarin.test.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Validation : ContentPage
+    public partial class Environment : ContentPage
     {
-        public Validation()
+        public Environment()
         {
             InitializeComponent();
         }

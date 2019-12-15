@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!--<TargetFramework>netstandard2.0</TargetFramework>-->
     <TargetFrameworks></TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81;uap10.0.16299</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81;MonoAndroid90;uap10.0.16299</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     
@@ -16,7 +16,7 @@
     <PackageProjectUrl>https://github.com/ptdave20/com.ptdave.xamarin</PackageProjectUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin</PackageTags>
     <PackageId>com.ptdave.xamarin</PackageId>
-    <Version>1.0.7</Version>
+    <Version>1.0.9</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
     <Configurations>Debug;Release;Nuget Release</Configurations>
@@ -55,7 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <Compile Include="**\*.shared.cs" />
     <Compile Include="**\*.shared.xaml.cs" />
   </ItemGroup>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="com.ptdave.xamarin.test.Views.Environment"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:com.ptdave.xamarin.test.ViewModels"
+    x:DataType="vm:EnvironmentModel"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:EnvironmentModel x:Name="Model" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="IsDarkMode" HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding IsDarkMode}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="IsLightMode" HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding IsLightMode}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="IsUnkown" HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding IsUnknown}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
