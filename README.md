@@ -50,16 +50,23 @@ Then you can access it easily like so (Your font family may vary):
 
 ## Behaviors
 Several behaviors are there to simplify some work and validation
+- InputMask - Input masking for entries
 - Minimum Length - Does the input string meet the required length?
 - RegExp Tester - Does the input match the enterred regex?
 - Had Focus - Has the field had focus?
 
 ## Value Converters
 These are some simple converters
+ - GreaterThan (Returns true if a value is greater than specified parameter)
+ - IsEmpty (Returns if a string or IEnumerable is empty)
  - Invert (false to true, true to false)
  - IsNull (Bound object is null (true/false))
+ - IsNotEmpty (Returns if a string or IEnumerable is not empty)
  - IsNotNull (Bound object is not null (true/false))
  - StringLength (Returns the length of the bound string, defaults 0)
+ - ToCurrency (Returns double value to Currency i.e. ToString("C"))
+ - ToLower (Returns string in lowercase)
+ - ToUpper (Returns string to uppercase)
 
 
  Accessible by adding the following to your ContentPage Xaml:
@@ -86,3 +93,4 @@ I accept pull request. I just ask that you please discuss with me first what you
 The following people have either helped in the project or allowed their code snippets to be used in the project.
 
 - Brandon Minick @TheCodeTraveler ( Environment for Theme inspired by his code found [https://codetraveler.io/2019/09/11/check-for-dark-mode-in-xamarin-forms/](here))
+- https://xamarinhelp.com/masked-entry-in-xamarin-forms/ Adam Pedley for InputMask, Cannot find a accurate means of communicating with this user
