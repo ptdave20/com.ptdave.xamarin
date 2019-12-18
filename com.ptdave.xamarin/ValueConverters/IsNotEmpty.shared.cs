@@ -20,7 +20,7 @@ namespace com.ptdave.xamarin.ValueConverters
             }
             else if (value is IEnumerable)
             {
-                return ((IEnumerable<object>)value).Any();
+                return ((IEnumerable)value).Cast<object>().Any();
             }
             return false;
         }

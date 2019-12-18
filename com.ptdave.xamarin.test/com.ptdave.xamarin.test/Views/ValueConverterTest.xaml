@@ -21,6 +21,7 @@
             <vc:ToUpper x:Key="ToUpper" />
             <vc:ToLower x:Key="ToLower" />
             <vc:IsEmpty x:Key="IsEmpty" />
+            <vc:IsNotEmpty x:Key="IsNotEmpty" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -49,6 +50,19 @@
             <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                 <Label HorizontalOptions="StartAndExpand" Text="IsEmpty (string)" />
                 <Label Text="{Binding InputTest, Converter={StaticResource IsEmpty}}" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding EmptyCollection, Converter={StaticResource IsNotEmpty}}">
+                <Label Text="Should not see - IsNotEmpty" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding HasItems, Converter={StaticResource IsNotEmpty}}">
+                <Label Text="Should see - IsNotEmpty" />
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding EmptyCollection, Converter={StaticResource IsEmpty}}">
+                <Label Text="Should see - IsEmpty" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding HasItems, Converter={StaticResource IsEmpty}}">
+                <Label Text="Should not see - IsEmpty" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

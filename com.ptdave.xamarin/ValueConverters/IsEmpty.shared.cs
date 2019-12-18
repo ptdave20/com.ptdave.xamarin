@@ -19,7 +19,7 @@ namespace com.ptdave.xamarin.ValueConverters
                 return string.IsNullOrEmpty((string)value);
             } else if (value is IEnumerable)
             {
-                return !((IEnumerable<object>)value).Any();
+                return !((IEnumerable)value).Cast<object>().Any();
             }
             return false;
         }
