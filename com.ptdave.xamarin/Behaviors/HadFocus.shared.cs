@@ -33,6 +33,7 @@ namespace com.ptdave.xamarin.Behaviors
             nameof(HasHadFocus),
             typeof(bool),
             typeof(HadFocus),
+            false,
             BindingMode.OneWay);
     }
 }

@@ -64,8 +64,8 @@ namespace com.ptdave.xamarin.Behaviors
             nameof(RegExp),
             typeof(string),
             typeof(ValidRegExp),
-            BindingMode.TwoWay
-            );
+            "",
+            BindingMode.TwoWay);
 
 
         /// <summary>
