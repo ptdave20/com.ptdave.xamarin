@@ -1,3 +1,6 @@
+1/3/2020
+- Update defaultValue for property
+
 12/15/2019
 - Additional ValueConverters
 - Fix to theme detection
