@@ -18,12 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\com.ptdave.xamarin\com.ptdave.xamarin.csproj" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\..\com.ptdave.xamarin\com.ptdave.xamarin.csproj" />
   </ItemGroup>
 
   <ItemGroup>

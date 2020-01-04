@@ -22,6 +22,8 @@
             <vc:ToLower x:Key="ToLower" />
             <vc:IsEmpty x:Key="IsEmpty" />
             <vc:IsNotEmpty x:Key="IsNotEmpty" />
+            <vc:Date x:Key="Date" />
+            <vc:DateLocal x:Key="DateLocal" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -57,12 +59,25 @@
             <StackLayout IsVisible="{Binding HasItems, Converter={StaticResource IsNotEmpty}}">
                 <Label Text="Should see - IsNotEmpty" />
             </StackLayout>
-
             <StackLayout IsVisible="{Binding EmptyCollection, Converter={StaticResource IsEmpty}}">
                 <Label Text="Should see - IsEmpty" />
             </StackLayout>
             <StackLayout IsVisible="{Binding HasItems, Converter={StaticResource IsEmpty}}">
                 <Label Text="Should not see - IsEmpty" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='short'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='medium'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='long'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='full'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='shortDate'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='mediumDate'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='longDate'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='fullDate'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='shortTime'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='mediumTime'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='longTime'}" />
+                <Label Text="{Binding Date, Converter={StaticResource DateLocal}, ConverterParameter='fullTime'}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

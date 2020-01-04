@@ -19,6 +19,9 @@ namespace com.ptdave.xamarin.test.ViewModels
         public ObservableCollection<int> EmptyCollection { get; set; }
         public ObservableCollection<int> HasItems { get; set; }
 
+        public DateTime Date { get; set; } = DateTime.UtcNow;
+        public DateTimeOffset DateOffset { get; set; } = DateTimeOffset.UtcNow;
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }
